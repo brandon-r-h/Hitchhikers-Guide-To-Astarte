@@ -3,8 +3,8 @@
 - install the Ubuntu disk image: https://ubuntu.com/desktop
 - When you open VMware and start making the VM, i will prompt you to select a disk image, and you will go to your files and click on the Ubuntu one.
 - For the most part you can go through the default settings unless Calvin suggest otherwise
-- If needed, Ask Calvin for help, watch: 
-The video should walk you through completely on how to create a VM as well
+- If needed, Ask Calvin for help, watch: https://www.youtube.com/watch?v=DMOiiooXjTw&t=1114s
+- The video should walk you through completely on how to create a VM as well
 ### Super important!!!: Create the VM with 100 GB of storage
 - Once the VM is set, in the home directory in the files, create a file where you will be putting all your stuff
  
