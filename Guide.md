@@ -36,33 +36,61 @@ $ sudo apt-get install valgrind xfslibs-dev
 $ git clone https://git.qemu-project.org/qemu.git
 
 - Next: 
-- Switch to the QEMU root directory.
-type: cd qemu
-- Prepare a native debug build.
-type: mkdir -p bin/debug/native
-type: cd bin/debug/native
-- Configure QEMU and start the build.
-type: ../../../configure --enable-debug
-Then after that finishes, type: make
+- Switch to the QEMU root directory
+
+$ cd qemu
+
+- Prepare a native debug build
+
+$ mkdir -p bin/debug/native
+
+$ cd bin/debug/native
+
+- Configure QEMU and start the build
+
+$ ../../../configure --enable-debug
+
+-Then after that finishes: 
+
+$ make
+
 - Return to the QEMU root directory.
-type: cd ../../..
+
+$ cd ../../..
+
 - At this point you should be in the qemu directory and should be in the right place
 - Configure QEMU for x86_64 only - faster build
-type: ./configure --target-list=x86_64-softmmu --enable-debug
-- Build in parallel - my system has 4 CPUs
-type: make -j4
+
+$ ./configure --target-list=x86_64-softmmu --enable-debug
+
+- Build in parallel 
+
+$ make -j4
+
 - Create an img in qemu
-type: qemu-img create -f qcow2 test.qcow2 16G
+
+$ qemu-img create -f qcow2 test.qcow2 16G
+
 - Go to the browser, and go to: https://dl.fedoraproject.org/pub/archive/fedora/linux/releases/20/Live/x86_64/
 - download: Fedora-Live-Desktop-x86_64-20-1.iso
 - When done downloading, move the Fedora-Live-Desktop-x86_64-20-1.iso file to the qemu file directory i.e. go to downloads, right-click on Fedora-Live-Desktop-x86_64-20-1.iso file and click on "Move To", and move it to the qemu folder that should be in your project file
--  Go back to the terminal, and type: ls -la Fedora-Live-Desktop-x86_64-20-1.iso
+-  Go back to the terminal: 
+
+$ ls -la Fedora-Live-Desktop-x86_64-20-1.iso
+
 -  This will check if Fedora is in the directory
 -  Everything should be good enough to get started with booting qemu
--  In the terminal type: qemu-system-x86_64 test.qcow2 -cdrom Fedora-Live-Desktop-x86_64-20-1.iso -S -monitor stdio
+-  In the terminal: 
+
+$ qemu-system-x86_64 test.qcow2 -cdrom Fedora-Live-Desktop-x86_64-20-1.iso -S -monitor stdio
+
 -  this will open up the VM window and prompt '(qemu)' in the terminal and type:
+
 (qemu) singlestep
+
 (qemu) singlestep
+
 (qemu) info registers
+
 - And that will print the initial state of the registers
-#
+# Creating 'Hello World' bare metal file 
