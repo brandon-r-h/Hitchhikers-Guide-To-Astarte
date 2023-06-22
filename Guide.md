@@ -9,7 +9,7 @@ The video should walk you through completely on how to create a VM as well
 - Once the VM is set, in the home directory in the files, create a file where you will be putting all your stuff
  
 # QEMU
-## Installing QEMU
+## Setting Up QEMU
 
 - Open terminal
 - go to the folder you created for your project: cd ~/Folder_Name 
