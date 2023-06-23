@@ -94,3 +94,39 @@ $ qemu-system-x86_64 test.qcow2 -cdrom Fedora-Live-Desktop-x86_64-20-1.iso -S -m
 
 - And that will print the initial state of the registers
 # Creating 'Hello World' bare metal file 
+-The following is courtesy of: https://mars-research.github.io/posts/2020/10/hello-world-on-bare-metal/#linker-script
+
+- The files you will need for this will be here:
+- Download the 'boot.asm','multiboot_header.asm', and 'linker.ld' files
+- Open up the terminal and go to the qemu directory:
+
+step 1:
+
+$ cd ~/Project_Folder_Name/qemu
+
+step 2:
+
+$ nasm -felf32 multiboot_header.asm -o multiboot_header.o
+
+- If 'nasm' is not downloaded, try(if it is, skip this section):
+
+### 'nasm' Troubleshooting
+
+$ sudo apt-get update -y
+
+$ sudo apt-get update -y nasm
+
+- If that does not work, follow the instrucion on: https://youtu.be/4Gl9rjzjZeA and do this in the home directory:
+
+$ cd
+
+### 'Hello World' file setup cont.
+- If you just finished troubleshooting nasm, start from step 1 again
+
+step 3:
+
+$ nasm -felf32 boot.asm -o boot.o
+
+step 4.
+
+$ ld -m elf_i386 -n -T linker.ld -o kernel.bin boot.o multiboot_header.o
