@@ -165,10 +165,21 @@ $ ld -m elf_i386 -n -T linker.ld -o kernel.bin boot.o multiboot_header.o
 ```
 
 # Creating Qtrace and Dtrace files
+- Download python files [here](https://github.com/brandon-r-h/Hitchhikers-Guide-To-Astarte/tree/main/Utils/Python_Scripts)
+- move the files into the qemu folder
+- Open up the terminal
 
+Run qscript.py
 ```console
-foo@bar:~$ whoami
-foo
+$ python3 qscript.py
 ```
+- This will generate a .qtrace file and you will need to change line 29 of the.
+qToDaikon.py to: txtIn = "Name of file qscript.py created"
+- Save the file and open the terminal again
 
-
+Run qToDaikon.py
+```console
+$ python3 qToDaikon.py
+```
+Now you should have created a .dtrace file!
+# Daikon
