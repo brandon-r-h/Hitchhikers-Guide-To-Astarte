@@ -129,7 +129,9 @@ $ nasm -felf32 boot.asm -o boot.o
 
 step 4.
 
+```console
 $ ld -m elf_i386 -n -T linker.ld -o kernel.bin boot.o multiboot_header.o
+```
 
 # Creating Qtrace and Dtrace files
 
