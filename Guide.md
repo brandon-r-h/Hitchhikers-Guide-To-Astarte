@@ -1,10 +1,10 @@
 # First things first . . . Creating a VM
 - Install VMware Workstation: https://www.vmware.com/products/workstation-player.html?utm_source=google&utm_medium=cpc&utm_term=engine:google|campaignid:13610504138|adid:656589288205|gclid:Cj0KCQjw4s-kBhDqARIsAN-ipH0HN2NLcIGmq_ZLDY0SrQMqLLjJsfu5uyJx-RztLYwtSb3ORI4CSFIaAgtvEALw_wcB&gad=1&gclid=Cj0KCQjw4s-kBhDqARIsAN-ipH0HN2NLcIGmq_ZLDY0SrQMqLLjJsfu5uyJx-RztLYwtSb3ORI4CSFIaAgtvEALw_wcB
-- install the Ubuntu disk image: https://ubuntu.com/desktop
-- When you open VMware and start making the VM, i will prompt you to select a disk image, and you will go to your files and click on the Ubuntu one.
-- For the most part you can go through the default settings unless Calvin suggest otherwise
-- If needed, Ask Calvin for help, watch: https://www.youtube.com/watch?v=DMOiiooXjTw&t=1114s
-- The video should walk you through completely on how to create a VM as well
+- [ ] install the Ubuntu disk image: https://ubuntu.com/desktop
+2. When you open VMware and start making the VM, i will prompt you to select a disk image, and you will go to your files and click on the Ubuntu one.
+3. For the most part you can go through the default settings unless Calvin suggest otherwise
+4. If needed, Ask Calvin for help, watch: https://www.youtube.com/watch?v=DMOiiooXjTw&t=1114s
+The video should walk you through completely on how to create a VM as well
 ### Super important!!!: Create the VM with 100 GB of storage
 - Once the VM is set, in the home directory in the files, create a file where you will be putting all your stuff
  
