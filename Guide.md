@@ -1,5 +1,5 @@
 # First things first . . . Creating a VM
-- Install VMware Workstation [here] (https://www.vmware.com/products/workstation-player.html?utm_source=google&utm_medium=cpc&utm_term=engine:google|campaignid:13610504138|adid:656589288205|gclid:Cj0KCQjw4s-kBhDqARIsAN-ipH0HN2NLcIGmq_ZLDY0SrQMqLLjJsfu5uyJx-RztLYwtSb3ORI4CSFIaAgtvEALw_wcB&gad=1&gclid=Cj0KCQjw4s-kBhDqARIsAN-ipH0HN2NLcIGmq_ZLDY0SrQMqLLjJsfu5uyJx-RztLYwtSb3ORI4CSFIaAgtvEALw_wcB)
+- Install VMware Workstation [here](https://www.vmware.com/products/workstation-player.html?utm_source=google&utm_medium=cpc&utm_term=engine:google|campaignid:13610504138|adid:656589288205|gclid:Cj0KCQjw4s-kBhDqARIsAN-ipH0HN2NLcIGmq_ZLDY0SrQMqLLjJsfu5uyJx-RztLYwtSb3ORI4CSFIaAgtvEALw_wcB&gad=1&gclid=Cj0KCQjw4s-kBhDqARIsAN-ipH0HN2NLcIGmq_ZLDY0SrQMqLLjJsfu5uyJx-RztLYwtSb3ORI4CSFIaAgtvEALw_wcB)
 - [ ] install the Ubuntu disk image: https://ubuntu.com/desktop
 2. When you open VMware and start making the VM, i will prompt you to select a disk image, and you will go to your files and click on the Ubuntu one.
 3. For the most part you can go through the default settings unless Calvin suggest otherwise
