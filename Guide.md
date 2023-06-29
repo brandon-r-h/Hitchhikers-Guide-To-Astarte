@@ -37,57 +37,59 @@ $ sudo apt-get install valgrind xfslibs-dev
 $ git clone https://git.qemu-project.org/qemu.git
 ```
 
-- Next: 
-- Switch to the QEMU root directory
+Next: Switch to the QEMU root directory
 ```console
 
 $ cd qemu
 ```
-- Prepare a native debug build
+Prepare a native debug build
 ```console
 $ mkdir -p bin/debug/native
 
 $ cd bin/debug/native
 ```
-- Configure QEMU and start the build
+Configure QEMU and start the build
 ```console
 $ ../../../configure --enable-debug
 ```
--Then after that finishes: 
+Then after that finishes
 ```console
 $ make
 ```
-- Return to the QEMU root directory.
+Return to the QEMU root directory
 ```console
 $ cd ../../..
 ```
-- At this point you should be in the qemu directory and should be in the right place
-- Configure QEMU for x86_64 only - faster build
+- At this point you should be in the qemu directory and should be in the right place.
+
+Configure QEMU for x86_64 only - faster build
 ```console
 $ ./configure --target-list=x86_64-softmmu --enable-debug
 ```
-- Build in parallel 
+Build in parallel 
 ```console
 $ make -j4
 ```
-- Create an img in qemu
+Create an img in qemu
 ```console
 $ qemu-img create -f qcow2 test.qcow2 16G
 ```
-- Go to the browser, and go to: https://dl.fedoraproject.org/pub/archive/fedora/linux/releases/20/Live/x86_64/
+- Go to the browser, and go to this [link](https://dl.fedoraproject.org/pub/archive/fedora/linux/releases/20/Live/x86_64/)
 - download: Fedora-Live-Desktop-x86_64-20-1.iso
-- When done downloading, move the Fedora-Live-Desktop-x86_64-20-1.iso file to the qemu file directory i.e. go to downloads, right-click on Fedora-Live-Desktop-x86_64-20-1.iso file and click on "Move To", and move it to the qemu folder that should be in your project file
--  Go back to the terminal: 
+- When done downloading, move the Fedora-Live-Desktop-x86_64-20-1.iso file to the qemu file directory i.e. go to downloads, right-click on Fedora-Live-Desktop-x86_64-20-1.iso file and click on "Move To", and move it to the qemu folder that should be in your project file.
+
+Go back to the terminal
 ```console
 $ ls -la Fedora-Live-Desktop-x86_64-20-1.iso
 ```
 -  This will check if Fedora is in the directory
 -  Everything should be good enough to get started with booting qemu
--  In the terminal: 
+
+In the terminal 
 ```console
 $ qemu-system-x86_64 test.qcow2 -cdrom Fedora-Live-Desktop-x86_64-20-1.iso -S -monitor stdio
 ```
--  this will open up the VM window and prompt '(qemu)' in the terminal and type:
+this will open up the VM window and prompt '(qemu)' in the terminal and type:
 ```console
 (qemu) singlestep
 
@@ -95,12 +97,12 @@ $ qemu-system-x86_64 test.qcow2 -cdrom Fedora-Live-Desktop-x86_64-20-1.iso -S -m
 
 (qemu) info registers
 ```
-- And that will print the initial state of the registers
+And that will print the initial state of the registers
 # Creating 'Hello World' bare metal file 
--The following is courtesy of: https://mars-research.github.io/posts/2020/10/hello-world-on-bare-metal/#linker-script
+-The following is courtesy of [mars-research github](https://mars-research.github.io/posts/2020/10/hello-world-on-bare-metal/#linker-script)
 
-- The files you will need for this will be here:
-- Download the 'boot.asm','multiboot_header.asm', and 'linker.ld' files
+- The files you will need for this will be [here](https://github.com/brandon-r-h/Hitchhikers-Guide-To-Astarte/tree/main/Utils/Hello_World_Files)
+- Download the 'boot.asm','multiboot_header.asm', and 'linker.ld' files into the qemu folder 
 - Open up the terminal and go to the qemu directory:
 
 step 1:
@@ -117,9 +119,9 @@ $ nasm -felf32 multiboot_header.asm -o multiboot_header.o
 ```console
 $ sudo apt-get update -y
 
-$ sudo apt-get update -y nasm
+$ sudo apt-get install -y nasm
 ```
-- If that does not work, follow the instrucion on: https://youtu.be/4Gl9rjzjZeA and do this in the home directory:
+- If that does not work, follow the instructions on this [video](https://youtu.be/4Gl9rjzjZeA) and do this in the home directory:
 ```console
 $ cd
 ```
@@ -130,8 +132,7 @@ step 3:
 ```console
 $ nasm -felf32 boot.asm -o boot.o
 ```
-step 4.
-
+step 4:
 ```console
 $ ld -m elf_i386 -n -T linker.ld -o kernel.bin boot.o multiboot_header.o
 ```
