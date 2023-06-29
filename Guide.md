@@ -9,7 +9,6 @@
 - Once the VM is set, in the home directory in the files, create a file where you will be putting all your stuff
  
 # QEMU
-## Setting Up QEMU
 
 - Open terminal
 - go to the folder you created for your project: cd ~/Folder_Name 
